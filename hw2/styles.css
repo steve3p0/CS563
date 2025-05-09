@@ -1,1 +1,31 @@
-/* Add your code here */
+/* Root CSS Variables */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --hover-color: #2980b9;
+    --text-color: #333;
+    --bg-color: #f4f4f4;
+    --card-bg: #fff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    padding: 1rem;
+}
+
+.card button:hover {
+    background-color: var(--secondary-color);
+}
+
+.table-section tr:hover {
+    background-color: var(--hover-color);
+    color: #fff;
+}

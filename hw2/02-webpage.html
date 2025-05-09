@@ -1,14 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>02 - Webpage</title>
-    <link rel="stylesheet" href="../styles.css" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- Add your code here -->
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage - HW2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#cards">Cards</a></li>
+            <li><a href="#table">Table</a></li>
+            <li><a href="#form">Form</a></li>
+        </ul>
+    </nav>
+
+    <section id="cards" class="cards-section">
+        <div class="card">
+            <img src="http://placekitten.com/200/300" alt="Cute Kitten">
+            <p>Adorable kitten chilling on a sunny day.</p>
+            <button>Learn More</button>
+        </div>
+        <div class="card">
+            <img src="http://placekitten.com/200/300" alt="Curious Kitten">
+            <p>Curious kitten exploring the garden.</p>
+            <button>See Details</button>
+        </div>
+    </section>
+
+    <section id="table" class="table-section">
+        <table>
+            <tr><th>Channel</th><th>Program</th></tr>
+            <tr><td>HBO</td><td>Game of Thrones</td></tr>
+            <tr><td>Netflix</td><td>Stranger Things</td></tr>
+            <tr><td>Hulu</td><td>The Handmaid's Tale</td></tr>
+        </table>
+    </section>
+
+    <section id="form" class="form-section">
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</body>
 </html>
