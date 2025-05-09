@@ -105,9 +105,43 @@ body {
 }
 
 
-/* Table Styles */
+/* Table Section Styles */
 
-.table-section tr:hover {
-    background-color: var(--hover-color);
-    color: #fff;
+.table-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+.table-section th, .table-section td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.table-section .header {
+    background-color: black;
+    color: white;
+}
+
+.channel.purple {
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+}
+
+.channel {
+    background-color: #fff;
+    color: black;
+    font-weight: bold;
+}
+
+.table-section tr:hover td {
+    background-color: gold;
+    color: black;
+}
+
+.table-section tr:hover .channel.purple {
+    background-color: purple;
+    color: white;
 }
