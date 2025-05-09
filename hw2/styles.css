@@ -196,16 +196,35 @@ input[type="date"] {
 fieldset {
     margin: 1rem 0;
     border: none;
-}
-
-fieldset label {
-    font-weight: normal; /* Regular weight for pronoun labels */
+    padding-left: 0; /* Align with other fields */
 }
 
 legend {
     font-weight: bold;
     margin-bottom: 0.2rem;
 }
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+.radio-label {
+    margin-left: 10px; /* Align text properly with radio button */
+}
+
+fieldset label {
+    font-weight: normal; /* Regular weight for pronoun labels */
+}
+
+fieldset label, .radio-group label {
+    display: inline-block;
+    width: 100%;
+    /* margin-left: 130px;  */
+    /* Align with input labels */
+}
+
 
 input[type="radio"] + label {
     font-weight: normal;
