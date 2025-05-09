@@ -177,7 +177,7 @@ body {
 
 label {
     width: 120px;
-    font-weight: normal;
+    font-weight: bold;
     margin-right: 0.5rem;
     text-align: left;
 }
@@ -198,22 +198,18 @@ fieldset {
     border: none;
 }
 
+fieldset label {
+    font-weight: normal; /* Regular weight for pronoun labels */
+}
+
 legend {
     font-weight: bold;
     margin-bottom: 0.2rem;
 }
 
-label input[type="radio"] {
-    margin-right: 0.5rem;
-}
-
-label {
-    font-weight: normal;
-}
-
 input[type="radio"] + label {
     font-weight: normal;
-    margin-left: 0.5rem;
+    /* margin-left: 0.5rem; */
 }
 
 /* Form Buttons */
