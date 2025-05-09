@@ -6,60 +6,60 @@
     --text-color: #333;
     --bg-color: #f4f4f4;
     --card-bg: #fff;
-}
-
-body {
+  }
+  
+  body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     background-color: var(--bg-color);
     color: var(--text-color);
-}
-
-
-/* Navbar Styles */
-.navbar {
+  }
+  
+  
+  /* Navbar Styles */
+  .navbar {
     background-color: black;
     /* padding: 1rem; */
     display: flex;
     justify-content: center;
-}
-
-.navbar ul {
+  }
+  
+  .navbar ul {
     list-style: none;
     display: flex;
     gap: 1rem;
     margin: 0;
-}
-
-.navbar li {
+  }
+  
+  .navbar li {
     margin: 0;
-}
-
-.navbar a {
+  }
+  
+  .navbar a {
     display: block; /* Cover the entire list item */
     color: #fff;
     text-decoration: none;
     padding: 0.75rem 1.25rem;
     transition: background-color 0.3s ease;
-}
-
-.navbar a:hover,
-.navbar a:focus {
+  }
+  
+  .navbar a:hover,
+  .navbar a:focus {
     background-color: purple;
     color: white;
-}
-
-
-/* Card Section Styles */
-.cards-section {
+  }
+  
+  
+  /* Card Section Styles */
+  .cards-section {
     display: flex;
     gap: 1rem;
     justify-content: center;
     padding: 1rem;
-}
-
-.card {
+  }
+  
+  .card {
     background-color: #fff;
     border: 2px solid #ddd;
     padding: 1rem;
@@ -67,32 +67,32 @@ body {
     max-width: 300px;
     margin: 0.5rem;
     border-radius: 0px;
-}
-
-.card h2 {
+  }
+  
+  .card h2 {
     font-size: 1.2rem;
     margin-bottom: 0.2rem;  /* Reduced margin */
     font-weight: bold;
-}
-
-.card .card-subtitle {
+  }
+  
+  .card .card-subtitle {
     font-size: 1rem;
     margin-top: 0;  /* No additional space */
     margin-bottom: 0.5rem;
-}
-
-
-.card img {
+  }
+  
+  
+  .card img {
     max-width: 100%;
     margin-bottom: 0.5rem;
-}
-
-.card p {
+  }
+  
+  .card p {
     font-size: 0.9rem;
     margin: 0.5rem 0;
-}
-
-/* .card button {
+  }
+  
+  /* .card button {
     background-color: black;
     color: white;
     border: none;
@@ -101,14 +101,14 @@ body {
     margin-top: 0.5rem;
     border-radius: 0px;
     width: 100%
-}
-
-.card button:hover {
+  }
+  
+  .card button:hover {
     background-color: purple;
-} */
-
-/* Styled Link to Act as a Button */
-.card-button {
+  } */
+  
+  /* Styled Link to Act as a Button */
+  .card-button {
     display: inline-block;
     background-color: black;
     color: white;
@@ -120,56 +120,56 @@ body {
     width: calc(100% - 2rem);
     margin-left: auto;
     margin-right: auto;
-}
-
-.card-button:hover {
+  }
+  
+  .card-button:hover {
     background-color: purple;
-}
-
-
-/* Table Section Styles */
-
-.table-section table {
+  }
+  
+  
+  /* Table Section Styles */
+  
+  .table-section table {
     width: 100%;
     border-collapse: collapse;
     margin: 1rem 0;
-}
-
-.table-section th, .table-section td {
+  }
+  
+  .table-section th, .table-section td {
     border: 1px solid #ddd;
     padding: 0.75rem;
     text-align: center;
-}
-
-.table-section .header {
+  }
+  
+  .table-section .header {
     background-color: black;
     color: white;
-}
-
-.channel.purple {
+  }
+  
+  .channel.purple {
     background-color: purple;
     color: white;
     font-weight: bold;
-}
-
-.channel {
+  }
+  
+  .channel {
     background-color: #fff;
     color: black;
     font-weight: bold;
-}
-
-.table-section tr:hover td {
+  }
+  
+  .table-section tr:hover td {
     background-color: gold;
     color: black;
-}
-
-.table-section tr:hover .channel.purple {
+  }
+  
+  .table-section tr:hover .channel.purple {
     background-color: purple;
     color: white;
-}
-
-/* Form Section Styles */
-.form-section {
+  }
+  
+  /* Form Section Styles */
+  .form-section {
     border: 2px solid #ddd;
     padding: 1.5rem;
     margin: 1rem auto;
@@ -177,85 +177,85 @@ body {
     text-align: left;
     border-radius: 8px;
     background-color: #f4f4f4;
-}
-
-.form-section h2 {
+  }
+  
+  .form-section h2 {
     font-size: 1.4rem;
     margin-bottom: 0.25rem;
-}
-
-.form-section p {
+  }
+  
+  .form-section p {
     margin: 0.25rem 0 1rem;
     font-size: 0.9rem;
     color: #555;
-}
-
-.form-group {
+  }
+  
+  .form-group {
     display: flex;
     align-items: center;
     margin: 0.5rem 0;
-}
-
-label {
+  }
+  
+  label {
     width: 120px;
     font-weight: bold;
     margin-right: 0.5rem;
     text-align: left;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="date"] {
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="date"] {
     flex: 1;
     padding: 0.4rem;
     margin: 0.25rem 0;
     border: 1px solid #ccc;
     border-radius: 4px;
-}
-
-fieldset {
+  }
+  
+  fieldset {
     margin: 1rem 0;
     border: none;
     padding-left: 0; /* Align with other fields */
-}
-
-legend {
+  }
+  
+  legend {
     font-weight: bold;
     margin-bottom: 0.2rem;
-}
-
-.radio-group {
+  }
+  
+  .radio-group {
     display: flex;
     align-items: center;
     margin: 0.5rem 0;
-}
-
-.radio-label {
+  }
+  
+  .radio-label {
     margin-left: 10px; /* Align text properly with radio button */
-}
-
-fieldset label {
+  }
+  
+  fieldset label {
     font-weight: normal; /* Regular weight for pronoun labels */
-}
-
-fieldset label, .radio-group label {
+  }
+  
+  fieldset label, .radio-group label {
     display: inline-block;
     width: 100%;
-}
-
-input[type="radio"] + label {
+  }
+  
+  input[type="radio"] + label {
     font-weight: normal;
-}
-
-/* Form Buttons */
-.form-buttons {
+  }
+  
+  /* Form Buttons */
+  .form-buttons {
     display: flex;
     justify-content: space-between;
     width: 100%; /* Ensure full width of the form */
-}
-
-button {
+  }
+  
+  button {
     flex: 1;
     padding: 0.5rem;
     margin: 0 0.25rem; /* Add margin between buttons */
@@ -263,26 +263,27 @@ button {
     border-radius: 0px;
     font-size: 1rem;
     cursor: pointer;
-}
-
-.primary-btn {
+  }
+  
+  .primary-btn {
     background-color: black;
     color: white;
-}
-
-.primary-btn:hover {
+  }
+  
+  .primary-btn:hover {
     background-color: purple;
-}
-
-.secondary-btn {
+  }
+  
+  .secondary-btn {
     background-color: white;
     color: black;
     border: 1px solid #ccc;
-}
-
-.secondary-btn:hover {
+  }
+  
+  .secondary-btn:hover {
     background-color: lightgray;
-}
-
-
-
+  }
+  
+  
+  
+  
