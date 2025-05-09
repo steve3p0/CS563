@@ -1,289 +1,288 @@
 /* Root CSS Variables */
 :root {
-    --primary-color: #3498db;
-    --secondary-color: #2ecc71;
-    --hover-color: #2980b9;
-    --text-color: #333;
-    --bg-color: #f4f4f4;
-    --card-bg: #fff;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-  }
-  
-  
-  /* Navbar Styles */
-  .navbar {
-    background-color: black;
-    /* padding: 1rem; */
-    display: flex;
-    justify-content: center;
-  }
-  
-  .navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    margin: 0;
-  }
-  
-  .navbar li {
-    margin: 0;
-  }
-  
-  .navbar a {
-    display: block; /* Cover the entire list item */
-    color: #fff;
-    text-decoration: none;
-    padding: 0.75rem 1.25rem;
-    transition: background-color 0.3s ease;
-  }
-  
-  .navbar a:hover,
-  .navbar a:focus {
-    background-color: purple;
-    color: white;
-  }
-  
-  
-  /* Card Section Styles */
-  .cards-section {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    padding: 1rem;
-  }
-  
-  .card {
-    background-color: #fff;
-    border: 2px solid #ddd;
-    padding: 1rem;
-    text-align: center;
-    max-width: 300px;
-    margin: 0.5rem;
-    border-radius: 0px;
-  }
-  
-  .card h2 {
-    font-size: 1.2rem;
-    margin-bottom: 0.2rem;  /* Reduced margin */
-    font-weight: bold;
-  }
-  
-  .card .card-subtitle {
-    font-size: 1rem;
-    margin-top: 0;  /* No additional space */
-    margin-bottom: 0.5rem;
-  }
-  
-  
-  .card img {
-    max-width: 100%;
-    margin-bottom: 0.5rem;
-  }
-  
-  .card p {
-    font-size: 0.9rem;
-    margin: 0.5rem 0;
-  }
-  
-  /* .card button {
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    margin-top: 0.5rem;
-    border-radius: 0px;
-    width: 100%
-  }
-  
-  .card button:hover {
-    background-color: purple;
-  } */
-  
-  /* Styled Link to Act as a Button */
-  .card-button {
-    display: inline-block;
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 0.5rem 1rem;
-    margin-top: 0.5rem;
-    text-decoration: none;
-    border-radius: 0px;
-    width: calc(100% - 2rem);
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .card-button:hover {
-    background-color: purple;
-  }
-  
-  
-  /* Table Section Styles */
-  
-  .table-section table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1rem 0;
-  }
-  
-  .table-section th, .table-section td {
-    border: 1px solid #ddd;
-    padding: 0.75rem;
-    text-align: center;
-  }
-  
-  .table-section .header {
-    background-color: black;
-    color: white;
-  }
-  
-  .channel.purple {
-    background-color: purple;
-    color: white;
-    font-weight: bold;
-  }
-  
-  .channel {
-    background-color: #fff;
-    color: black;
-    font-weight: bold;
-  }
-  
-  .table-section tr:hover td {
-    background-color: gold;
-    color: black;
-  }
-  
-  .table-section tr:hover .channel.purple {
-    background-color: purple;
-    color: white;
-  }
-  
-  /* Form Section Styles */
-  .form-section {
-    border: 2px solid #ddd;
-    padding: 1.5rem;
-    margin: 1rem auto;
-    max-width: 400px;
-    text-align: left;
-    border-radius: 8px;
-    background-color: #f4f4f4;
-  }
-  
-  .form-section h2 {
-    font-size: 1.4rem;
-    margin-bottom: 0.25rem;
-  }
-  
-  .form-section p {
-    margin: 0.25rem 0 1rem;
-    font-size: 0.9rem;
-    color: #555;
-  }
-  
-  .form-group {
-    display: flex;
-    align-items: center;
-    margin: 0.5rem 0;
-  }
-  
-  label {
-    width: 120px;
-    font-weight: bold;
-    margin-right: 0.5rem;
-    text-align: left;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  input[type="password"],
-  input[type="date"] {
-    flex: 1;
-    padding: 0.4rem;
-    margin: 0.25rem 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  fieldset {
-    margin: 1rem 0;
-    border: none;
-    padding-left: 0; /* Align with other fields */
-  }
-  
-  legend {
-    font-weight: bold;
-    margin-bottom: 0.2rem;
-  }
-  
-  .radio-group {
-    display: flex;
-    align-items: center;
-    margin: 0.5rem 0;
-  }
-  
-  .radio-label {
-    margin-left: 10px; /* Align text properly with radio button */
-  }
-  
-  fieldset label {
-    font-weight: normal; /* Regular weight for pronoun labels */
-  }
-  
-  fieldset label, .radio-group label {
-    display: inline-block;
-    width: 100%;
-  }
-  
-  input[type="radio"] + label {
-    font-weight: normal;
-  }
-  
-  /* Form Buttons */
-  .form-buttons {
-    display: flex;
-    justify-content: space-between;
-    width: 100%; /* Ensure full width of the form */
-  }
-  
-  button {
-    flex: 1;
-    padding: 0.5rem;
-    margin: 0 0.25rem; /* Add margin between buttons */
-    border: none;
-    border-radius: 0px;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  
-  .primary-btn {
-    background-color: black;
-    color: white;
-  }
-  
-  .primary-btn:hover {
-    background-color: purple;
-  }
-  
-  .secondary-btn {
-    background-color: white;
-    color: black;
-    border: 1px solid #ccc;
-  }
-  
-  .secondary-btn:hover {
-    background-color: lightgray;
-  }
-  
-  
-  
-  
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --hover-color: #2980b9;
+  --text-color: #333;
+  --bg-color: #f4f4f4;
+  --card-bg: #fff;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+
+/* Navbar Styles */
+.navbar {
+  background-color: black;
+  /* padding: 1rem; */
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+}
+
+.navbar li {
+  margin: 0;
+}
+
+.navbar a {
+  display: block; /* Cover the entire list item */
+  color: #fff;
+  text-decoration: none;
+  padding: 0.75rem 1.25rem;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+  background-color: purple;
+  color: white;
+}
+
+
+/* Card Section Styles */
+.cards-section {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.card {
+  background-color: #fff;
+  border: 2px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+  max-width: 300px;
+  margin: 0.5rem;
+  border-radius: 0px;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;  /* Reduced margin */
+  font-weight: bold;
+}
+
+.card .card-subtitle {
+  font-size: 1rem;
+  margin-top: 0;  /* No additional space */
+  margin-bottom: 0.5rem;
+}
+
+
+.card img {
+  max-width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+/* .card button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  border-radius: 0px;
+  width: 100%
+}
+
+.card button:hover {
+  background-color: purple;
+} */
+
+/* Styled Link to Act as a Button */
+.card-button {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  border-radius: 0px;
+  width: calc(100% - 2rem);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-button:hover {
+  background-color: purple;
+}
+
+
+/* Table Section Styles */
+
+.table-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.table-section th, .table-section td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.table-section .header {
+  background-color: black;
+  color: white;
+}
+
+.channel.purple {
+  background-color: purple;
+  color: white;
+  font-weight: bold;
+}
+
+.channel {
+  background-color: #fff;
+  color: black;
+  font-weight: bold;
+}
+
+.table-section tr:hover td {
+  background-color: gold;
+  color: black;
+}
+
+.table-section tr:hover .channel.purple {
+  background-color: purple;
+  color: white;
+}
+
+/* Form Section Styles */
+.form-section {
+  border: 2px solid #ddd;
+  padding: 1.5rem;
+  margin: 1rem auto;
+  max-width: 400px;
+  text-align: left;
+  border-radius: 8px;
+  background-color: #f4f4f4;
+}
+
+.form-section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.25rem;
+}
+
+.form-section p {
+  margin: 0.25rem 0 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+label {
+  width: 120px;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+  flex: 1;
+  padding: 0.4rem;
+  margin: 0.25rem 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+fieldset {
+  margin: 1rem 0;
+  border: none;
+  padding-left: 0; /* Align with other fields */
+}
+
+legend {
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.radio-label {
+  margin-left: 10px; /* Align text properly with radio button */
+}
+
+fieldset label {
+  font-weight: normal; /* Regular weight for pronoun labels */
+}
+
+fieldset label, .radio-group label {
+  display: inline-block;
+  width: 100%;
+}
+
+input[type="radio"] + label {
+  font-weight: normal;
+}
+
+/* Form Buttons */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Ensure full width of the form */
+}
+
+button {
+  flex: 1;
+  padding: 0.5rem;
+  margin: 0 0.25rem; /* Add margin between buttons */
+  border: none;
+  border-radius: 0px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background-color: black;
+  color: white;
+}
+
+.primary-btn:hover {
+  background-color: purple;
+}
+
+.secondary-btn {
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+}
+
+.secondary-btn:hover {
+  background-color: lightgray;
+}
+
+
+
