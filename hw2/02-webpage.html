@@ -92,15 +92,55 @@
         </table>
     </section>
     
+<br>
+<br>
 
-    <section id="form" class="form-section">
-        <form>
+<section id="form" class="form-section">
+    <h2>Sign Up Form</h2>
+    <p>Fill up the items in the form below.</p>
+    <form>
+        <div class="form-group">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" placeholder="Caterina Paun" required>
+        </div>
+
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="caterina" required>
+        </div>
+
+        <div class="form-group">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
+            <input type="email" id="email" name="email" placeholder="caterina@pdx.edu" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="********" required>
+        </div>
+
+        <div class="form-group">
+            <label for="dob">Date of birth:</label>
+            <input type="date" id="dob" name="dob" value="2022-01-01" required>
+        </div>
+
+        <fieldset>
+            <legend>Preferred Pronouns</legend>
+            <label><input type="radio" name="pronouns" value="she" checked> She/her</label><br>
+            <label><input type="radio" name="pronouns" value="he"> He/him</label><br>
+            <label><input type="radio" name="pronouns" value="they"> They/them</label><br>
+            <label><input type="radio" name="pronouns" value="none"> I prefer not to say</label>
+        </fieldset>
+
+        <div class="form-buttons">
+            <button type="submit" class="primary-btn">Submit</button>
+            <button type="reset" class="secondary-btn">Reset</button>
+        </div>
+    </form>
+</section>
+
+
+    
+    
 </body>
 </html>
