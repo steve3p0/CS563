@@ -1,23 +1,29 @@
 /* Specificity: 0-1-2 */
 nav .list-item > a {
+  color: blue;
 }
 
 /* Specificity: 1-0-1 */
 #main::first-letter {
+  font-weight: bold;
 }
 
 /* Specificity: 0-1-1 */
 input[type] {
+  border: 1px solid gray;
 }
 
 /* Specificity: 0-2-1 */
 section .main::first-line {
+  font-style: italic;
 }
 
 /* Specificity: 1-2-3 */
 nav ul.menu li#first a:not([class='visited']) {
+  background: lightgray;
 }
 
 /* Specificity: 0-0-13 */
 div ol li ul li ol li ul li a {
+  text-decoration: underline;
 }

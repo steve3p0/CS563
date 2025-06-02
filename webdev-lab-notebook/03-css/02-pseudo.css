@@ -1,16 +1,19 @@
-p.quote::before {
-  content: open-quote;
-  font-size: 2em;
-  color: gray;
+/* ----------  Container  ---------- */
+.container {
+  width: 600px;
+  margin: 40px auto;
 }
 
-p.quote::after {
-  content: close-quote;
-  font-size: 2em;
-  color: gray;
-}
+/* ---------- Paragraphs  ---------- */
+/* .paragraph {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 3rem 0;    
+  text-align: left;
+} */
 
-button.fancy:hover {
-  background-color: lightblue;
-  cursor: pointer;
+/* ----------   Larger first letter   ---------- */
+.paragraph::first-letter {
+  font-size: 40px;
+  line-height: .75;
 }
