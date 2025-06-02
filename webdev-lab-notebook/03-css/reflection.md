@@ -2,12 +2,12 @@
 
 ### HTML
 
-Enter your reflections on this section here.
+I learned how class and ID attributes can be used to organize and style content, especially when combined with CSS selectors like attribute selectors or compound class names. Setting up the HTML to support those selectors made me more mindful of naming conventions and hierarchy.
 
 ### Accessibility
 
-I had to add main tags to fix a page region error. 
-There was 1 alert for 
+I had to add main tags to fix a page region error. And the biggest assessibility issue was the low contrast use of colors.
+There was 1 alert for not having a first level heading h1 tag.  I added a Selectors h1 tag to rectify this.
 
 ### CSS
 
