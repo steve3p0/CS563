@@ -1,43 +1,70 @@
-/* ─── colour tokens ─── */
+/* =========================================================
+   COLOR PALETTE
+   ========================================================= */
 :root {
-  --blue:   #2890ff;
-  --orange: #f5a000;
-  --yellow: #ffd700;
-  --black:  #000;
+  --blue:   #2890ff;   /* header */
+  --orange: #f5a000;   /* main block */
+  --yellow: #ffd700;   /* aside */
+  --black:  #000000;   /* borders */
 }
 
-/* ─── reset / base ─── */
-*{box-sizing:border-box;margin:0}
-body{font:16px/1.4 Arial,sans-serif}
+/* =========================================================
+   RESET / BASE
+   ========================================================= */
+* { box-sizing: border-box; margin: 0; }
 
-/* ─── shared box styling ─── */
-.header,.section,.aside{
-  border:3px solid var(--black);
-  padding:1rem;
+body {
+  font: 16px/1.4 Arial, sans-serif;
 }
 
-.header {background:var(--blue)}
-
-/* ---------- mobile-first ( < 600 px ) ----------  */
-.section{background:var(--orange)}
-.aside  {background:var(--yellow)}
-
-/*  header full-width is already block by default
-    section + aside will just stack naturally       */
-
-/* ---------- tablet / desktop  ≥ 600 px ---------- */
-@media (min-width:600px){
-  .section{
-    float:left;
-    width:80%;              /* orange 80 % */
-    height:220px;           /* demo height */
-  }
-  .aside{
-    float:right;
-    width:25%;              /* yellow 25 % – now fits next to orange */
-    height:180px;
-  }
+/* =========================================================
+   SHARED BOX STYLES
+   ========================================================= */
+.header,
+.section,
+.aside {
+  border: 3px solid var(--black);
+  padding: 1rem;
 }
 
-/* clearfix so anything after these floats starts below them */
-body::after{content:"";display:block;clear:both}
+/* =========================================================
+   HEADER  (always full-width)
+   ========================================================= */
+.header { background: var(--blue); }
+
+/* =========================================================
+   MOBILE-FIRST  (< 600 px)
+   Orange 80 %  |  Yellow 25 %
+   They cannot both fit, so yellow wraps below.
+   ========================================================= */
+.section {
+  float: left;
+  width: 80%;
+  height: 300px;
+  background: var(--orange);
+}
+
+.aside {
+  float: right;
+  width: 25%;
+  height: 300px;
+  background: var(--yellow);
+}
+
+/* =========================================================
+   TABLET / DESKTOP  (≥ 600 px)
+   Shrink yellow to 20 % so 80% + 20% = 100% and both fit
+   on a single row.
+   ========================================================= */
+@media (min-width: 600px) {
+  .aside { width: 20%; }
+}
+
+/* =========================================================
+   CLEARFIX  (so nothing after the floats overlaps them)
+   ========================================================= */
+body::after {
+  content: "";
+  display: block;
+  clear: both;
+}
