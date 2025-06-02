@@ -2,7 +2,7 @@
 
 ### HTML
 
-I was able to complete the HTML exercises mostly on my own, though I referenced the instructions and screenshots to ensure accuracy. I also reviewed example HTML syntax to double-check best practices, especially for using semantic elements like <figure>, <figcaption>, and proper use of alt attributes.
+I was able to complete the HTML exercises mostly on my own, though I referenced the instructions and screenshots to ensure accuracy. I also reviewed example HTML syntax to double-check best practices, especially for using semantic elements like figure, figcaption, and proper use of alt attributes.
 
 The exercises were very helpful in reinforcing basic HTML structure and semantic elements. Exercise 02 (Images) stood out because it emphasized accessibility and the proper way to use captions, which was new for me. I also appreciated the emphasis on structured tables in Exercise 03. 
 
