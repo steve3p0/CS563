@@ -56,7 +56,7 @@ body {
    Shrink yellow to 20 % so 80% + 20% = 100% and both fit
    on a single row.
    ========================================================= */
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   .aside { width: 20%; }
 }
 
