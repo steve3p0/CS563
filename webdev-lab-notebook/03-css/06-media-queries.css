@@ -1,6 +1,22 @@
-@media (min-width: 1024px) {
-  body {
-    background: var(--green);
-    color: var(--white);
+.box {
+  background-color: lightblue;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* Medium screen */
+@media (min-width: 600px) {
+  .box {
+    background-color: lightgreen;
+    font-size: 22px;
+  }
+}
+
+/* Large screen */
+@media (min-width: 900px) {
+  .box {
+    background-color: orange;
+    font-size: 26px;
   }
 }

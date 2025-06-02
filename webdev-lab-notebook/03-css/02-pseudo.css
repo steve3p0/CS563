@@ -1,4 +1,16 @@
-.container {
-  width: 600px;
-  margin: 40px auto;
+p.quote::before {
+  content: open-quote;
+  font-size: 2em;
+  color: gray;
+}
+
+p.quote::after {
+  content: close-quote;
+  font-size: 2em;
+  color: gray;
+}
+
+button.fancy:hover {
+  background-color: lightblue;
+  cursor: pointer;
 }

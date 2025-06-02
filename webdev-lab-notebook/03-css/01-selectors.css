@@ -1,21 +1,65 @@
 /* CSS custom properties / CSS variables */
-
 :root {
   --darkmagenta: #8b008b;
   --magenta: #ff00ff;
   --royalblue: #4169e1;
   --teal: #008080;
   --violet: #9400d3;
+  --green: green;
+  --limegreen: limegreen;
 }
 
-/* Use attribute selectors for the first part of the exercise */
+/* ------------------- */
+/* Attribute Selectors */
+/* ------------------- */
 
-li[class] {
-  color: var(--red);
+li[class~="dog"] {
+  color: var(--magenta);
 }
 
-/* Use descendant, child, and sibling selectors for the second part */
+li#cat {
+  color: var(--teal);
+}
 
-section li {
+li[class~="parrot"] {
   color: var(--green);
+}
+
+li[class~="donkey"] {
+  color: var(--royalblue);
+}
+
+li[class~="hedgehog"] {
+  color: var(--violet);
+}
+
+li[class~="dog"][class~="cat"][class~="parrot"] {
+  color: var(--royalblue);
+}
+
+/* ----------------------------- */
+/* Parent and Sibling Selectors */
+/* ----------------------------- */
+
+/* Use descendant selector for list-food */
+.list-food ol > li.first {
+  color: var(--limegreen);
+}
+
+/* Use adjacent sibling for flour */
+.list-food ol > li.first + li {
+  color: var(--magenta);
+}
+
+/* Use nth-child for remaining items */
+.list-food ol > li:nth-child(3) {
+  color: var(--royalblue);
+}
+.list-food ol > li:nth-child(4) {
+  color: var(--violet);
+}
+
+/* Target second section list */
+.list-cleaning ol > li {
+  color: var(--limegreen);
 }
