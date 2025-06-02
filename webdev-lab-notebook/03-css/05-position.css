@@ -22,3 +22,56 @@ body {
   font-weight: bold;
   font-size: 0.8rem;
 }
+
+/* ---------- color tokens ---------- */
+:root {
+  --white:       #ffffff;
+  --darkviolet:  #9400d3; /* static */
+  --purple:      #660066; /* relative */
+  --maroon:      #800000; /* absolute */
+  --darkgolden:  #b8860b; /* fixed   */
+}
+
+/* ---------- reset ---------- */
+* { box-sizing: border-box; }
+/* body { margin: 0; font: 32px/1.2 Helvetica, Arial, sans-serif; } */
+
+/* ---------- shared box styles ---------- */
+.box {
+  width: 100%;
+  padding: 20px;
+  color: var(--white);
+}
+
+/* 1) static – simply part of normal flow */
+.static   {
+  background: var(--darkviolet);
+  height: 400px;
+}
+
+/* 2) relative – normal flow + you could offset if you wanted */
+.relative {
+  position: relative;
+  background: var(--purple);
+  height: 400px;
+}
+
+/* 3) absolute – sized bar placed right after the two tall blocks */
+.absolute {
+  position: absolute;   /* taken out of flow */
+  top: 800px;           /* 400 + 400 + borders (2×2px) + paddings (2×20px) */
+  left: 0;
+  height: 50px;
+  background: var(--maroon);
+  width: 100%;
+}
+
+/* 4) fixed – sticks to bottom of viewport */
+.fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  background: var(--darkgolden);
+  width: 100%;
+}

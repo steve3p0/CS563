@@ -1,52 +1,43 @@
-/* -------------  Color tokens ------------- */
+/* ─── colour tokens ─── */
 :root {
-  --black: #000;
-  --blue:  #2196f3;  /* header */
-  --orange:#f5a000;  /* main section */
-  --gold:  #ffd700;  /* aside */
+  --blue:   #2890ff;
+  --orange: #f5a000;
+  --yellow: #ffd700;
+  --black:  #000;
 }
 
-/* -------------  Base reset ------------- */
-* { box-sizing: border-box; }
-body { margin: 0; font: 18px/1.4 "Helvetica Neue", Arial, sans-serif; }
+/* ─── reset / base ─── */
+*{box-sizing:border-box;margin:0}
+body{font:16px/1.4 Arial,sans-serif}
 
-/* -------------  Shared box styles ------------- */
-.header, .section, .aside {
-  border: 4px solid var(--black);
-  padding: 1.5rem;
+/* ─── shared box styling ─── */
+.header,.section,.aside{
+  border:3px solid var(--black);
+  padding:1rem;
 }
 
-/* -------------  Header ------------- */
-.header {
-  background: var(--blue);
+.header {background:var(--blue)}
+
+/* ---------- mobile-first ( < 600 px ) ----------  */
+.section{background:var(--orange)}
+.aside  {background:var(--yellow)}
+
+/*  header full-width is already block by default
+    section + aside will just stack naturally       */
+
+/* ---------- tablet / desktop  ≥ 600 px ---------- */
+@media (min-width:600px){
+  .section{
+    float:left;
+    width:80%;              /* orange 80 % */
+    height:220px;           /* demo height */
+  }
+  .aside{
+    float:right;
+    width:25%;              /* yellow 25 % – now fits next to orange */
+    height:180px;
+  }
 }
 
-/* -------------  Main orange section ------------- */
-.section {
-  float: left;
-  width: 80%;
-  height: 300px;          /* matches screenshot height */
-  background: var(--orange);
-}
-
-/* -------------  Yellow aside ------------- */
-.aside {
-  float: right;
-  height: 300px;
-  background: var(--gold);
-}
-
-.aside-20 {
-  width: 20%;
-}
-
-.aside-25 {
-  width: 25%;
-}
-
-/* -------------  Clearfix (so footer etc. won’t overlap) ------------- */
-body::after {
-  content: "";
-  display: table;
-  clear: both;
-}
+/* clearfix so anything after these floats starts below them */
+body::after{content:"";display:block;clear:both}
