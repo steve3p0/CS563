@@ -10,7 +10,7 @@ Prior to turning in your assignment, complete the following checklist in regards
 
 - [x] Use Prettier to properly format your HTML code.
 - [ ] N/A: Use Prettier to properly format your CSS code.
-- [ ] N/A: Use Prettier to properly format your JavaScript code.
+- [x] Use Prettier to properly format your JavaScript code.
 
 #### How to update this markdown document?
 

@@ -6,6 +6,8 @@ For Lab 05, the primary focus was on CSS to manipulate existing HTML structures.
 
 ### Accessibility
 
+Wave AIM: No reported errors or alerts.
+
 Accessibility in this lab largely depended on the initial HTML structure. Since we were focused on layout via CSS Grid, the accessibility implications were more about ensuring that the chosen layouts didn't negatively impact reading order or keyboard navigation. For example, ensuring that visual reordering in the grid still made sense semantically. The use of semantic HTML elements in `02-grid-areas.html` (like `<header>`, `<article>`, `<aside>`) is beneficial for accessibility. If the layouts are responsive and don't cause content overlap or unreadable text due to an awkward CSS grid setup, accessibility should be maintained. The color contrast of the purple boxes with white text (from the shared `styles.css`) would be a point to check with WAVE, though this was part of the provided styling.
 
 ### CSS

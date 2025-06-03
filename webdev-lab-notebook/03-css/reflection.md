@@ -12,6 +12,8 @@ The HTML served as the canvas upon which the various CSS styling and layout tech
 
 ### Accessibility
 
+Wave AIM: A contrast error was reported on exercise 05-position.  However, since the instructor wants us to match the screenshots that is provided in the instructions markdown, we will leave it as-is.
+
 While not the primary focus of Lab 3, accessibility considerations were implicitly addressed through good HTML practices and CSS implementation:
 
 * **Semantic HTML:** As noted in the HTML reflection, the use of semantic HTML elements (`<nav>`, `<section>`, etc.) naturally contributes to a more accessible document outline for assistive technologies.

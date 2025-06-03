@@ -11,6 +11,14 @@ The lab emphasized how Bootstrap abstracts complex layouts and components into r
 
 ### Accessibility
 
+Wave AIM: Serveral errors and alerts were reported by Wave:
+* **01-Cards:** 4 alerts were reported.  I did not fix these as a fix would likely contradict the instructors screenshots that we are supposed to match.
+    ** 2 alerts for suspicious alternative text in the images because the alt text doesn't match the placeholder text.
+    ** 2 alerts for suspicious link text for "Click Me".
+* **02-Model:** 1 alert for skipped heading vlevel.  I did not fix this as a fix would likely contradict the instructors screenshot that we are supposed to match.
+
+A contrast error was reported on exercise 05-position.  However, since the instructor wants us to match the screenshots that is provided in the instructions markdown, we will leave it as-is.
+
 Bootstrap aims to provide accessible components out of the box.
 * **Cards**: Semantic structure of headings, paragraphs, and links/buttons within cards is important. Alt text for images (even placeholders) is crucial.
 * **Grid**: The reading order determined by the HTML source order is important, even if Bootstrap classes reorder elements visually. For these exercises, the source order generally matched the visual flow or was simple enough not to cause issues.

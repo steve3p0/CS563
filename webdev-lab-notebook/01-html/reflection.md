@@ -13,6 +13,8 @@ Overall, this lab solidified my understanding of fundamental HTML structuring ta
 
 ### Accessibility
 
+Wave AIM: Wave did report an alert that 04-flexbox.html did not have an h1 heading so I put one in there.
+
 While directly running an accessibility audit with Wave AIM was a checklist item, the exercises themselves inherently included elements crucial for accessibility:
 
 * **`alt` attributes for images:** By adding descriptive `alt` text to `<img>` tags, I ensured that screen readers could convey the content of the images to visually impaired users. This is a fundamental aspect of image accessibility.
