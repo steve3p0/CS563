@@ -1,52 +1,53 @@
-const url = 'https://anapioficeandfire.com/api/books/';
+$(document).ready(function() {
+  const url = 'https://anapioficeandfire.com/api/books/';
+  const $booksContainer = $('#books'); // jQuery object for the #books container
+  const $loadingIndicator = $('#loading'); // jQuery object for the loading image
 
-const app = document.querySelector('#books');
-app.style.paddingLeft = 0;
-const loading = document.querySelector('#loading');
+  // Style the main container if needed (original code had this for vanilla app element)
+  // $booksContainer.css('padding-left', 0); // Example if direct styling needed via jQuery
 
-const addBookToDOM = (item) => {
-  console.log(item);
-  let element = document.createElement('div');
-  let title = document.createElement('h4');
-  let author = document.createElement('p');
-  let published = document.createElement('p');
-  let pages = document.createElement('p');
+  const addBookToDOM = (item) => {
+    // Create elements using jQuery
+    const $element = $('<div>').css({ // Chain CSS styling
+      'display': 'flex',
+      'flex-direction': 'column',
+      'align-items': 'center',
+      'margin-top': '20px'
+    });
 
-  element.style.display = 'flex';
-  element.style.flexDirection = 'column';
-  element.style.alignItems = 'center';
-  element.style.marginTop = '20px';
+    const $title = $('<h4>').text(item.name);
+    const $author = $('<p>').text(`by ${item.authors.join(', ')}`); // Handle multiple authors
 
-  title.textContent = item.name;
-  author.textContent = `by ${item.authors[0]}`;
-  published.textContent = item.released.substr(0, 4);
-  pages.textContent = `${item.numberOfPages} pages`;
+    // Extract year from the 'released' date string
+    const releaseYear = item.released ? new Date(item.released).getFullYear() : 'N/A';
+    const $published = $('<p>').text(releaseYear);
 
-  element.append(title);
-  element.append(author);
-  element.append(published);
-  element.append(pages);
+    const $pages = $('<p>').text(`${item.numberOfPages} pages`);
 
-  app.append(element);
-};
+    // Append created elements to the book element, then to the main container
+    $element.append($title, $author, $published, $pages);
+    $booksContainer.append($element);
+  };
 
-const fetchData = (url) => {
-  fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
-      data.forEach((item) => {
+  // Fetch data using jQuery's $.ajax method
+  $.ajax({
+    url: url,
+    method: 'GET',
+    dataType: 'json',
+    success: function(data) {
+      // Process the data (array of books)
+      $.each(data, function(index, item) {
         addBookToDOM(item);
       });
-    })
-    .catch((error) => {
-      console.log(error);
-      let li = document.createElement('li');
-      li.textContent = `An error occured. Please try again.`;
-      app.append(li);
-    })
-    .finally(() => {
-      app.removeChild(loading);
-    });
-};
-
-fetchData(url);
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
+      console.error('Error fetching data:', textStatus, errorThrown);
+      const $errorLi = $('<div>').text('An error occurred. Please try again.'); // Use div for consistency
+      $booksContainer.append($errorLi);
+    },
+    complete: function() {
+      // This function is called after success or error
+      $loadingIndicator.remove(); // Remove loading indicator using jQuery
+    }
+  });
+});
