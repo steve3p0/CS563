@@ -1,24 +1,71 @@
+/* Grid Area Definitions */
 .header {
   grid-area: header;
 }
-
 .article {
   grid-area: article;
 }
+.aside {
+  grid-area: aside;
+}
+.section {
+  grid-area: section;
+}
+.footer {
+  grid-area: footer;
+}
 
+/* Base styles for the grid container (Mobile First - css-ex09-grid-areas-03.png) */
 .grid-container {
   display: grid;
-  height: 97vh;
+  height: 97vh; /* As per original starter file */
+  gap: 10px;    /* As per original starter file */
+
+  /* Mobile Layout (Single Column) */
+  /* Header, Article, Section, Aside, Footer stacked */
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(8, 1fr);
-  gap: 10px;
+  /* Proportional row heights: Header (small), Article (large), Section (large), Aside (small), Footer (small) */
+  grid-template-rows: 1fr 3fr 3fr 1fr 1fr; /* Total 9fr */
   grid-template-areas:
-    'header'
-    'article'
-    'article'
-    'section'
-    'section'
-    'section'
-    'aside'
-    'footer';
+    "header"
+    "article"
+    "section"
+    "aside"
+    "footer";
+}
+
+/* Tablet Layout (css-ex09-grid-areas-02.png) */
+@media (min-width: 768px) {
+  .grid-container {
+    /* Header (full width) */
+    /* Article (left, wider) | Aside (right, narrower) */
+    /* Section (full width) */
+    /* Footer (full width) */
+    grid-template-columns: 3fr 1fr; /* Article 3 parts, Aside 1 part */
+    /* Proportional row heights: Header (small), Article/Aside row (very large), Section (medium-large), Footer (small) */
+    grid-template-rows: 1fr 6fr 3fr 1fr; /* Total 11fr */
+    grid-template-areas:
+      "header  header"
+      "article aside"
+      "section section"
+      "footer  footer";
+  }
+}
+
+/* Desktop Layout (css-ex09-grid-areas-01.png) */
+@media (min-width: 1024px) {
+  .grid-container {
+    /* Header (full width) */
+    /* Aside (left, narrower) | Article (right, wider) */
+    /* Section (full width) */
+    /* Footer (full width) */
+    grid-template-columns: 1fr 3fr; /* Aside 1 part, Article 3 parts */
+    /* Row proportions can remain similar to tablet, or be adjusted if needed. Keeping them consistent here. */
+    grid-template-rows: 1fr 6fr 3fr 1fr; /* Total 11fr */
+    grid-template-areas:
+      "header  header"
+      "aside   article"
+      "section section"
+      "footer  footer";
+  }
 }

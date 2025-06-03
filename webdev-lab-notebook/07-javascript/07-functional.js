@@ -19,64 +19,58 @@ const characters = [
   { id: 88, name: 'Brienne', house: 'Tarth' },
 ];
 
-const mapNameFamily = (characters) => {
+const mapNameFamily = (charactersArray) => {
   // Return an array with the name and house of each character
   // Format: "Arya, of House Stark"
-
-  return characters;
+  return charactersArray.map(character => `${character.name}, of House ${character.house}`);
 };
 
-const filterFamily = (characters, house) => {
+const filterFamily = (charactersArray, targetHouse) => {
   // Return an array with only the characters from a given house
-
-  return characters;
+  return charactersArray.filter(character => character.house === targetHouse);
 };
 
-const reduceHouses = (characters) => {
+const reduceHouses = (charactersArray) => {
   // Return an object with the number of characters from each house
-
-  return characters;
+  return charactersArray.reduce((accumulator, character) => {
+    const house = character.house;
+    if (accumulator[house]) {
+      accumulator[house]++;
+    } else {
+      accumulator[house] = 1;
+    }
+    return accumulator;
+  }, {}); // Initial value is an empty object
 };
 
+console.log('--- mapNameFamily ---');
 console.log(mapNameFamily(characters));
+// Expected:
 // [
 //   'Arya, of House Stark',
 //   'Sansa, of House Stark',
-//   'Eddard, of House Stark',
-//   'Catelyn, of House Stark',
-//   'Robb, of House Stark',
-//   'Rickon, of House Stark',
-//   'Jaime, of House Lannister',
-//   'Cersei, of House Lannister',
-//   'Tyrion, of House Lannister',
-//   'Tywin, of House Lannister',
-//   'Kevan, of House Lannister',
-//   'Daenerys, of House Targaryen',
-//   'Viserys, of House Targaryen',
-//   'Rhaegar, of House Targaryen',
-//   'Theon, of House Greyjoy',
-//   'Yara, of House Greyjoy',
-//   'Davos, of House Seaworth',
-//   'Brienne, of House Tarth'
+//   ...
 // ]
 
+console.log('\n--- filterFamily (Stark) ---');
 console.log(filterFamily(characters, 'Stark'));
+// Expected:
 // [
 //   { id: 1, name: 'Arya', house: 'Stark' },
-//   { id: 4, name: 'Sansa', house: 'Stark' },
-//   { id: 16, name: 'Eddard', house: 'Stark' },
-//   { id: 17, name: 'Catelyn', house: 'Stark' },
-//   { id: 20, name: 'Robb', house: 'Stark' },
-//   { id: 28, name: 'Rickon', house: 'Stark' }
+//   ...
 // ]
 
+console.log('\n--- filterFamily (Greyjoy) ---');
 console.log(filterFamily(characters, 'Greyjoy'));
+// Expected:
 // [
 //   { id: 83, name: 'Theon', house: 'Greyjoy' },
 //   { id: 84, name: 'Yara', house: 'Greyjoy' }
 // ]
 
+console.log('\n--- reduceHouses ---');
 console.log(reduceHouses(characters));
+// Expected:
 // {
 //   Stark: 6,
 //   Lannister: 5,

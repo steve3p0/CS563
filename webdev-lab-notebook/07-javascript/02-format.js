@@ -4,7 +4,21 @@ const formatItems = (input) => {
   // for reference, see the MDN Number page:
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
 
-  return input;
+  if (!Array.isArray(input)) {
+    // Optional: Handle cases where input is not an array, though test cases are arrays.
+    return "Invalid input: Expected an array.";
+  }
+
+  const formattedNumbers = input.map(number => {
+    // Ensure the item is a number before calling toFixed
+    if (typeof number === 'number') {
+      return number.toFixed(3);
+    }
+    // Fallback for non-numeric items if they could exist in the array
+    return 'NaN'; // Or handle as an error
+  });
+
+  return formattedNumbers.join(', ');
 };
 
 console.log(formatItems([1, 4, 17, 26, 41]));

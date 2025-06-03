@@ -4,7 +4,10 @@ const replaceItems = (input) => {
   // for reference, see the MDN "Regular Expressions" entry:
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 
-  return input;
+  // Use regular expressions with 'g' for global and 'i' for case-insensitive
+  let result = input.replace(/gold/gi, 'SHINY');
+  result = result.replace(/wander/gi, 'roam');
+  return result;
 };
 
 console.log(replaceItems('All that is gold does not glitter'));
