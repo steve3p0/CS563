@@ -1,23 +1,152 @@
+
 .flex-container {
   background-color: rgb(190, 190, 231);
 }
 
-/* Flex Container 1 */
 
-/* Flex Container 2 */
+/* generic look for every flex item -------------------------- */
+.flex-item {
+  width: 150px;
+  height: 150px;
+  background: rgb(112, 0, 112);
+  /* background-color: rgb(190, 190, 231); */
+  color: #fff;
+  font: 50px Helvetica, Arial, sans-serif;
+  /* font: 5rem/150px Helvetica, Arial, sans-serif; */
+  text-align: center;
 
-/* Flex Container 3 */
-
-/* use height: 400px; on the container */
-
-/* Flex Container 4 */
-
-/* Flex Container 5 */
-
-/* Flex Container 6 */
-
-.flex-container-6 .flex-item {
-  width: 400px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-/* use height: 300px; on the container */
+/* -----------------------------------------------------------
+   FLEX-CONTAINER 1  — centerd, wraps onto a second row
+   ----------------------------------------------------------- */
+.flex-container-1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;   
+  justify-content: center;
+  gap: 40px;                /* matches white gaps in screenshot */
+
+  /* 5 boxes × 150 px + 4 gaps × 40 px  =  830 px
+     add a little room for safety →  900 px */
+  max-width: 1000px;         /* <-- key change */
+  margin: 0 auto;           /* center the whole block on page */
+  height: 400px
+}
+
+/* -----------------------------------------------------------
+   FLEX-CONTAINER 2  — same as #1 but reversed order
+   ----------------------------------------------------------- */
+.flex-container-2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;   /* 5-4-3-2-1 order                */
+  justify-content: flex-start;     /* push first row to the right     */
+
+  gap: 40px;
+  max-width: 950px;              /* ≥ 910 px so five boxes fit      */
+  margin: 0 auto;                /* center the whole block on page  */
+}
+
+
+/* -----------------------------------------------------------
+   FLEX-CONTAINER 3  — two columns flowing top→bottom
+   ----------------------------------------------------------- */
+.flex-container-3 {
+  display: flex;
+  flex-direction: column-reverse;   /* bottom-to-top */
+  flex-wrap: wrap;                  /* allow 2nd column */
+
+  height: calc(4 * 150px + 3 * 40px);  /* 4 boxes + 3 gaps */
+
+  gap: 40px 160px;                   /* row gap / column gap */
+
+  /* ↓ main-axis (vertical)  → bottom */
+  justify-content: flex-start;
+
+  /* ↓ cross-axis (horizontal)  → right */
+  align-content:  flex-end;   /* push the **columns** right */
+  align-items:    flex-end;   /* push the boxes inside each column right */
+
+  margin: 0 auto;             /* center whole block on the page */
+}
+
+
+/* -----------------------------------------------------------
+   FLEX-CONTAINER 4  — bring items 6-8 to the first row
+   ----------------------------------------------------------- */
+.flex-container-4 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0;                   /* Remove global gap to set manually */
+  max-width: 910px;         /* perfect width for five items */
+  margin: 0 auto;           /* center the whole container */
+}
+
+/* Items 6-8 first row */
+.flex-container-4 .item6,
+.flex-container-4 .item7,
+.flex-container-4 .item8 { 
+  order: -1; 
+  margin: 10px 50px;        /* wider horizontal spacing */
+}
+
+/* Items 1-5 second row */
+.flex-container-4 .item1,
+.flex-container-4 .item2,
+.flex-container-4 .item3,
+.flex-container-4 .item4,
+.flex-container-4 .item5 { 
+  order: 1; 
+  margin: 10px 10px;        /* tighter spacing */
+}
+
+/* Force line break after first row */
+.flex-container-4::after {
+  content: "";
+  flex-basis: 100%;
+  order: 0;
+}
+
+
+/* -----------------------------------------------------------
+   FLEX-CONTAINER 5  — uneven heights, aligned to baseline
+   ----------------------------------------------------------- */
+.flex-container-5 {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;              /* shorter boxes drop down */
+  gap: 20px;  
+}
+
+/* make 2, 6, 8 taller for the “staggered” look */
+.flex-container-5 .item2,
+.flex-container-5 .item6,
+.flex-container-5 .item8 { height: 220px; }
+
+/* -----------------------------------------------------------
+   FLEX-CONTAINER 6  — 3 items per column, columns fill width
+   ----------------------------------------------------------- */
+.flex-container-6 {
+  display: flex;
+  flex-direction: column;   /* stack downward first            */
+  flex-wrap: wrap;          /* wrap into additional columns     */
+  align-items: flex-start;
+
+  justify-content: flex-start;
+  /* 3 boxes tall  →  (150 px each + 40 px gap × 2) */
+  height: calc(150px * 3 + 40px * 2);
+
+  /* same gap vertically & horizontally */
+  gap: 20px;                
+  margin: 0 auto;           
+}
+
+.flex-container-6 .flex-item {
+  width: 32%;
+}
