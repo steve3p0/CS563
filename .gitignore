@@ -1,3 +1,14 @@
 .vscode/
 .DS_Store
 node_modules/
+
+# ========== Rules for .NET / Visual Studio Projects ==========
+
+# Ignore build output folders
+[Bb]in/
+[Oo]bj/
+
+# Ignore Visual Studio temporary files and user settings
+.vs/
+*.suo
+*.user
